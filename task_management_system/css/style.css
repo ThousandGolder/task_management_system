@@ -1,0 +1,344 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: arial, sans-serif;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: #23242b;
+  color: #fff;
+}
+.u-name {
+  font-size: 20px;
+  padding-left: 17px;
+}
+.u-name b {
+  color: #127b8e;
+}
+.header i {
+  font-size: 30px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.header .notification {
+  position: relative;
+  cursor: pointer;
+}
+.header .notification span {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  background: #c80000;
+  padding: 1px;
+  border-radius: 50%;
+}
+.header .notification:hover i {
+  color: #127b8e;
+}
+
+.notification-bar {
+  display: none;
+  width: 90%;
+  max-width: 300px;
+  position: absolute;
+  right: 0;
+  background: #eee;
+  padding: 5px;
+  border: 1px solid #262931;
+  box-shadow: 0 8px 16ox 0 rgb(0, 0, 0, 0.2) 0 6px 20ox 0 rgb(0, 0, 0, 0.19);
+}
+.notification-bar ul li {
+  list-style: none;
+  color: #000;
+}
+.notification-bar ul li a {
+  text-decoration: none;
+}
+.notification-bar ul li:nth-child(even) {
+  background: #fff;
+}
+.open-notification {
+  display: block;
+}
+
+.user-p {
+  text-align: center;
+  padding-left: 10px;
+  padding-top: 25px;
+}
+.user-p img {
+  width: 100px;
+  border-radius: 50%;
+}
+.user-p h4 {
+  color: #ccc;
+  padding: 5px 0;
+}
+.side-bar {
+  width: 250px;
+  background: #262931;
+  min-height: 100vh;
+  transition: 500ms width;
+}
+.body {
+  display: flex;
+}
+
+.side-bar ul {
+  margin-top: 20px;
+  list-style: none;
+}
+.side-bar ul li {
+  font-size: 16px;
+  padding: 15px 0px;
+  padding-left: 20px;
+  transition: 500ms background;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.side-bar ul li:hover {
+  background: #127b8e;
+}
+
+.side-bar ul li a {
+  text-decoration: none;
+  color: #eee;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+
+.side-bar .active a span {
+  color: #127b8e !important;
+}
+
+.side-bar .active a i {
+  color: #127b8e !important;
+}
+
+.side-bar ul li a i {
+  display: inline-block;
+  padding-right: 10px;
+  font-size: 23px;
+}
+
+#navbtn {
+  display: inline-block;
+  margin-left: 70px;
+  font-size: 20px;
+  transition: 500ms color;
+}
+#checkbox {
+  display: none;
+}
+#checkbox:checked ~ .body .side-bar {
+  width: 60px;
+}
+#checkbox:checked ~ .body .side-bar .user-p {
+  visibility: hidden;
+}
+#checkbox:checked ~ .body .side-bar a span {
+  display: none;
+}
+
+/* section styling */
+.section-1 {
+  padding: 30px;
+}
+.section-1 .title {
+  margin-bottom: 10px;
+}
+
+.edit-btn,
+.delete-btn,
+.section-1 .title a {
+  text-decoration: none;
+  display: inline-block;
+  padding-left: 10px;
+  border: none;
+  background: #00cf22;
+  padding: 10px 15px;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  transition: background 1s;
+  box-shadow: 0 8px 16px rgb(0, 0, 0, 0.2), 0 6px 20px 0 rgb(0, 0, 0, 0.19);
+}
+.section-1 {
+  width: 100%;
+  background-color: #ffe;
+}
+.edit-btn:hover,
+.delete-btn:hover,
+.section-1 .title a:hover {
+  opacity: 0.6;
+}
+.main-table,
+.main-table tr,
+.main-table th,
+.main-table td {
+  border: 1px solid #aaa;
+  border-collapse: collapse;
+  padding: 7px;
+}
+
+.main-table {
+  width: 90%;
+  margin-top: 30px;
+}
+
+.delete-btn {
+  background: #e00051;
+}
+.main-table .edit-btn {
+  margin-bottom: 5px;
+  background: #006ce0;
+  width: 75px;
+}
+
+/* styling dashboard */
+.dashboard {
+  display: flex;
+  max-width: 650px;
+  width: 95%;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.dashboard-item {
+  text-align: center;
+  background: #262931;
+  width: 200px;
+  padding: 30px;
+  margin-bottom: 40px;
+}
+
+.dashboard-item i {
+  display: block;
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+.dashboard-item span {
+  color: #fff;
+}
+
+/* login style */
+.container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.login_bg {
+  background-image: url(../img/login_bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 660px;
+  width: 100%;
+}
+.form_container .input span {
+  color: red;
+  background-color: wheat;
+}
+
+.form_container input {
+  border: 1px solid gray;
+  margin: 20px auto;
+  width: 100%;
+  padding-left: 10px;
+  border-radius: 2px;
+  font-size: 17px;
+  color: rgb(95, 90, 90);
+  height: 30px;
+}
+
+.form_container label {
+  font-size: 20px;
+}
+
+.login_btn input {
+  border: none;
+  border-radius: 5px;
+  background-color: #1970d3;
+  color: white;
+  font-size: 20px;
+}
+.login_btn:hover input {
+  background-color: #37dd3a;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+@media (max-width: 960px) {
+  .container {
+    border: 1px solid gray;
+    position: absolute;
+    top: 50px;
+    bottom: 180px;
+    left: 100px;
+    right: 100px;
+    padding: 20px 20px;
+    background-color: rgb(213, 231, 228);
+    border-radius: 20px;
+    box-shadow: 4px 3px 3px 2px rgb(0, 0, 0, 0.2);
+  }
+}
+
+@media (min-width: 960px) {
+  .container {
+    border: 1px solid gray;
+    position: absolute;
+    top: 50px;
+    bottom: 180px;
+    left: 450px;
+    right: 450px;
+    padding: 20px 20px;
+    background-color: rgb(213, 231, 228);
+    border-radius: 20px;
+    box-shadow: 0 0 128px 0 rgb(0, 0, 0, 0.2);
+  }
+}
+
+/* edit profile */
+
+        .container_add_users{
+        width: 50%;
+        min-width: 300px;}
+      .input-1,
+      .container_add_users input {
+        width: 80%;
+        height: 35px;
+        font-size: 16px;
+        border-radius: 5px;
+        padding-left: 10px;
+        color: gray;
+        justify-content: center;
+        margin: 5px auto 10px auto;
+        border: 1px solid;
+        border-color: blue;
+      }
+      .container_add_users .add_user_btn{
+      max-width: 40%;
+      padding: auto;
+      margin: auto  20%;
+      border: none;
+      background-color: #006CE0;
+      color: #fff;
+      font-size: 18px;
+      }
+      .add_user_btn:hover{
+        opacity: 0.6;
+      }
+    .container_add_users span{
+      color: red;
+    } 
+
+ .container_add_users #success{
+	color: green !important;
+}
